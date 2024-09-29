@@ -4,7 +4,10 @@ from django.http import StreamingHttpResponse, JsonResponse
 from .camera import VideoCamera
 import json
 
-camera = VideoCamera()  
+try:
+    camera = VideoCamera()  
+except Exception as e:
+    print(e)
 
 def gen(camera):
     while True:
