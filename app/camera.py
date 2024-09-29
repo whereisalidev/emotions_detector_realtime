@@ -11,7 +11,7 @@ class VideoCamera(object):
             raise IOError("Cannot open webcam")
         (self.grabbed, self.frame) = self.video.read()
         threading.Thread(target=self.update, args=()).start()
-
+    
     def __del__(self):
         self.video.release()
 
