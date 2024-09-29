@@ -34,7 +34,6 @@ class VideoCamera(object):
                 analyze = DeepFace.analyze(face_region, actions=['emotion'], enforce_detection=False)
                 emotions = analyze[0]['emotion']  
 
-                # Update the stored emotions
                 self.emotions = emotions
                 
                 dominant_emotion = max(emotions, key=emotions.get)
@@ -51,7 +50,7 @@ class VideoCamera(object):
         return jpeg.tobytes()
 
     def get_emotions(self):
-        return self.emotions  # Add this method to get the current emotions
+        return self.emotions 
 
     def update(self):
         while True:

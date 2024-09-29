@@ -4,7 +4,7 @@ from django.http import StreamingHttpResponse, JsonResponse
 from .camera import VideoCamera
 import json
 
-camera = VideoCamera()  # Create a single instance of VideoCamera
+camera = VideoCamera()  
 
 def gen(camera):
     while True:
@@ -23,5 +23,5 @@ def index(request, *args, **kwargs):
     return render(request, 'index.html')
 
 def get_emotions(request):
-    emotions = camera.get_emotions()  # Get emotions from the camera
+    emotions = camera.get_emotions() 
     return JsonResponse(emotions)
