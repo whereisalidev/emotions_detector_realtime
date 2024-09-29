@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,12 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eMotions</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <script src="{% static 'script.js' %}" defer></script>
 </head>
 <body>
-    <div style="text-align: center;">
+    <div id="video-container">
         <h1>Real Time Emotions Detector</h1>
-        <br>
         <img src="{% url 'camera' %}" alt="Video Streaming">
+    </div>
+    
+    <div id="emotion-container">
+        <div class="emotion">
+            <span class="emotion-label">Happy:</span>
+            <input type="range" class="slider" id="happy-slider" min="0" max="100" value="0" disabled>
+            <span id="happy-percentage">0%</span>
+        </div>
+        <div class="emotion">
+            <span class="emotion-label">Sad:</span>
+            <input type="range" class="slider" id="sad-slider" min="0" max="100" value="0" disabled>
+            <span id="sad-percentage">0%</span>
+        </div>
+        <div class="emotion">
+            <span class="emotion-label">Neutral:</span>
+            <input type="range" class="slider" id="neutral-slider" min="0" max="100" value="0" disabled>
+            <span id="neutral-percentage">0%</span>
+        </div>
+        <div class="emotion">
+            <span class="emotion-label">Angry:</span>
+            <input type="range" class="slider" id="angry-slider" min="0" max="100" value="0" disabled>
+            <span id="angry-percentage">0%</span>
+        </div>
+        <div class="emotion">
+            <span class="emotion-label">Surprise:</span>
+            <input type="range" class="slider" id="surprise-slider" min="0" max="100" value="0" disabled>
+            <span id="surprise-percentage">0%</span>
+        </div>
+        <div class="emotion">
+            <span class="emotion-label">Fear:</span>
+            <input type="range" class="slider" id="fear-slider" min="0" max="100" value="0" disabled>
+            <span id="fear-percentage">0%</span>
+        </div>
     </div>
 </body>
 </html>

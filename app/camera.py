@@ -10,6 +10,13 @@ class VideoCamera(object):
         if not self.video.isOpened():
             raise IOError("Cannot open webcam")
         (self.grabbed, self.frame) = self.video.read()
+        self.emotions = {
+            'happy': 0,
+            'sad': 0,
+            'angry': 0,
+            'surprise': 0,
+            'neutral': 0
+        }
         threading.Thread(target=self.update, args=()).start()
     
     def __del__(self):
@@ -27,6 +34,9 @@ class VideoCamera(object):
                 analyze = DeepFace.analyze(face_region, actions=['emotion'], enforce_detection=False)
                 emotions = analyze[0]['emotion']  
 
+                # Update the stored emotions
+                self.emotions = emotions
+                
                 dominant_emotion = max(emotions, key=emotions.get)
                 confidence = emotions[dominant_emotion]
 
@@ -39,6 +49,9 @@ class VideoCamera(object):
         ret, jpeg = cv2.imencode('.jpg', image)
 
         return jpeg.tobytes()
+
+    def get_emotions(self):
+        return self.emotions  # Add this method to get the current emotions
 
     def update(self):
         while True:
