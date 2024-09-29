@@ -67,22 +67,21 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 input[type="range"]::-moz-range-thumb {
-    width: 20px; /* Width of the thumb */
-    height: 20px; /* Height of the thumb */
-    background: blue; /* Thumb color */
-    border-radius: 50%; /* Round thumb */
-    cursor: pointer; /* Change cursor to pointer */
+    width: 20px; 
+    height: 20px;
+    background: blue; 
+    border-radius: 50%; 
+    cursor: pointer; 
 }
 
 input[type="range"]::-ms-thumb {
-    width: 20px; /* Width of the thumb */
-    height: 20px; /* Height of the thumb */
-    background: blue; /* Thumb color */
-    border-radius: 50%; /* Round thumb */
-    cursor: pointer; /* Change cursor to pointer */
+    width: 20px; 
+    height: 20px;
+    background: blue; 
+    border-radius: 50%; 
+    cursor: pointer; 
 }
 
-/* Optional: Style for the track when the slider is active */
 input[type="range"]:focus {
-    outline: none; /* Remove outline when focused */
+    outline: none;
 }
