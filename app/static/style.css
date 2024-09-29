@@ -8,13 +8,13 @@ body {
 }
 #video-container {
     text-align: center;
-    margin-left: 20px; /* Adjust margin as needed */
+    margin-left: 20px; 
 }
 #emotion-container {
     position: absolute;
-    left: 20px; /* Position the sliders to the left */
-    top: 100px; /* Adjust the vertical position */
-    width: 200px; /* Fixed width for the emotion container */
+    left: 20px; 
+    top: 100px; 
+    width: 200px;
 }
 .emotion {
     margin: 10px 0;
@@ -26,46 +26,44 @@ body {
 .slider {
     width: 100%;
 }
-/* Base styles for the slider track */
+
 input[type="range"] {
-    -webkit-appearance: none; /* Override default appearance in Safari */
-    appearance: none; /* Override default appearance in Firefox */
+    -webkit-appearance: none;
+    appearance: none; 
     width: 100%;
-    height: 8px; /* Height of the track */
-    background: #ddd; /* Default track color */
-    border-radius: 5px; /* Rounded corners for the track */
+    height: 8px; 
+    background: #ddd; 
+    border-radius: 5px; 
 }
 
-/* Dynamic track background color based on thumb position */
 input[type="range"]::-webkit-slider-runnable-track {
-    height: 8px; /* Height of the track */
+    height: 8px; 
     background: linear-gradient(to right, blue 0%, blue var(--value), #ddd var(--value), #ddd 100%);
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 5px; 
 }
 
 input[type="range"]::-moz-range-track {
-    height: 8px; /* Height of the track */
+    height: 8px; 
     background: linear-gradient(to right, blue 0%, blue var(--value), #ddd var(--value), #ddd 100%);
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 5px; 
 }
 
 input[type="range"]::-ms-track {
-    height: 8px; /* Height of the track */
+    height: 8px; 
     background: linear-gradient(to right, blue 0%, blue var(--value), #ddd var(--value), #ddd 100%);
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 5px; 
 }
 
-/* Style for the slider thumb */
 input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default appearance in Safari */
-    appearance: none; /* Override default appearance in Firefox */
-    width: 20px; /* Width of the thumb */
-    height: 20px; /* Height of the thumb */
-    background: blue; /* Thumb color */
-    border-radius: 50%; /* Round thumb */
-    cursor: pointer; /* Change cursor to pointer */
-    position: relative; /* Required for positioning */
-    top: -6px; /* Adjust position vertically */
+    -webkit-appearance: none;
+    appearance: none; 
+    width: 20px; 
+    height: 20px;
+    background: blue; 
+    border-radius: 50%; 
+    cursor: pointer; 
+    position: relative; 
+    top: -6px;
 }
 
 input[type="range"]::-moz-range-thumb {
