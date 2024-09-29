@@ -39,14 +39,12 @@ setInterval(() => {
         .catch(error => console.error('Error fetching emotions:', error));
 }, 1000);
 
-// Function to update slider background
 function updateSliderBackground(slider) {
     const value = (slider.value - slider.min) / (slider.max - slider.min) * 100;
     slider.style.setProperty('--value', `${value}%`);
 }
 
-// Update the background on input
 document.querySelectorAll('input[type="range"]').forEach(slider => {
-    updateSliderBackground(slider); // Set initial background
-    slider.addEventListener('input', () => updateSliderBackground(slider)); // Update on input
+    updateSliderBackground(slider); 
+    slider.addEventListener('input', () => updateSliderBackground(slider)); 
 });
