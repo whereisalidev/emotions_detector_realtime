@@ -25,9 +25,9 @@ SECRET_KEY = 'django-insecure-!f84%)1ojy+fm&f+fol8n88r#md9piyf4f*fgfbe)w02^*4ml0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'core-production-931d.up.railway.app']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'emotions.up.railway.app']
 
-CSRF_TRUSTED_ORIGINS = [ 'https://core-production-931d.up.railway.app' ]
+CSRF_TRUSTED_ORIGINS = [ 'https://emotions.up.railway.app' ]
 
 # Application definition
 
