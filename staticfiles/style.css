@@ -1,0 +1,87 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+#video-container {
+    text-align: center;
+    margin-left: 20px; 
+}
+#emotion-container {
+    position: absolute;
+    left: 20px; 
+    top: 100px; 
+    width: 200px;
+}
+.emotion {
+    margin: 10px 0;
+}
+.emotion-label {
+    display: inline-block;
+    width: 100px;
+}
+.slider {
+    width: 100%;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none; 
+    width: 100%;
+    height: 8px; 
+    background: #ddd; 
+    border-radius: 5px; 
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 8px; 
+    background: linear-gradient(to right, blue 0%, blue var(--value), #ddd var(--value), #ddd 100%);
+    border-radius: 5px; 
+}
+
+input[type="range"]::-moz-range-track {
+    height: 8px; 
+    background: linear-gradient(to right, blue 0%, blue var(--value), #ddd var(--value), #ddd 100%);
+    border-radius: 5px; 
+}
+
+input[type="range"]::-ms-track {
+    height: 8px; 
+    background: linear-gradient(to right, blue 0%, blue var(--value), #ddd var(--value), #ddd 100%);
+    border-radius: 5px; 
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none; 
+    width: 20px; 
+    height: 20px;
+    background: blue; 
+    border-radius: 50%; 
+    cursor: pointer; 
+    position: relative; 
+    top: -6px;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px; 
+    height: 20px;
+    background: blue; 
+    border-radius: 50%; 
+    cursor: pointer; 
+}
+
+input[type="range"]::-ms-thumb {
+    width: 20px; 
+    height: 20px;
+    background: blue; 
+    border-radius: 50%; 
+    cursor: pointer; 
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
