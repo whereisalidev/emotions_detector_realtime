@@ -1,1 +1,1 @@
-web: gunicorn core.wsgi
+web: gunicorn emotions_detector_realtime_django.wsgi
